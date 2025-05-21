@@ -69,5 +69,15 @@ namespace CantinaNiseReal.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_05_19_081851 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-05-19 081851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

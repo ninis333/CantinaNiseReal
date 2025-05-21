@@ -38,53 +38,64 @@
             lblTotal = new Label();
             data = new DateTimePicker();
             hora = new DateTimePicker();
-            quantidade = new TextBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            txtQuantidade = new NumericUpDown();
             label2 = new Label();
+            txtNomecliente = new TextBox();
+            lblNome = new Label();
+            cBoxPagamento = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtQuantidade).BeginInit();
             SuspendLayout();
             // 
             // txtprodutos
             // 
             txtprodutos.AutoSize = true;
-            txtprodutos.Location = new Point(213, 51);
+            txtprodutos.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtprodutos.ForeColor = Color.FromArgb(230, 255, 0);
+            txtprodutos.Location = new Point(278, 51);
             txtprodutos.Name = "txtprodutos";
-            txtprodutos.Size = new Size(99, 15);
+            txtprodutos.Size = new Size(109, 17);
             txtprodutos.TabIndex = 0;
             txtprodutos.Text = "Produtos Cantina";
             // 
             // txtcarrinho
             // 
             txtcarrinho.AutoSize = true;
-            txtcarrinho.Location = new Point(715, 51);
+            txtcarrinho.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtcarrinho.ForeColor = Color.FromArgb(230, 255, 0);
+            txtcarrinho.Location = new Point(780, 51);
             txtcarrinho.Name = "txtcarrinho";
-            txtcarrinho.Size = new Size(53, 15);
+            txtcarrinho.Size = new Size(60, 17);
             txtcarrinho.TabIndex = 1;
             txtcarrinho.Text = "Carrinho";
             // 
             // txtitem
             // 
+            txtitem.BackColor = Color.FromArgb(243, 241, 238);
             txtitem.FormattingEnabled = true;
             txtitem.ItemHeight = 15;
-            txtitem.Location = new Point(658, 69);
+            txtitem.Location = new Point(723, 69);
             txtitem.Name = "txtitem";
             txtitem.Size = new Size(170, 274);
             txtitem.TabIndex = 2;
             // 
             // txtlista
             // 
+            txtlista.BackColor = Color.FromArgb(243, 241, 238);
             txtlista.FormattingEnabled = true;
             txtlista.ItemHeight = 15;
-            txtlista.Location = new Point(177, 69);
+            txtlista.Location = new Point(242, 69);
             txtlista.Name = "txtlista";
             txtlista.Size = new Size(186, 274);
             txtlista.TabIndex = 3;
-            txtlista.SelectedIndexChanged += txtlista_SelectedIndexChanged;
             // 
             // txtadicionar
             // 
-            txtadicionar.BackColor = Color.White;
+            txtadicionar.BackColor = Color.FromArgb(202, 196, 183);
             txtadicionar.ForeColor = SystemColors.ActiveCaptionText;
-            txtadicionar.Location = new Point(464, 83);
+            txtadicionar.Location = new Point(529, 83);
             txtadicionar.Name = "txtadicionar";
             txtadicionar.Size = new Size(66, 21);
             txtadicionar.TabIndex = 4;
@@ -94,9 +105,9 @@
             // 
             // txtremover
             // 
-            txtremover.BackColor = SystemColors.ButtonHighlight;
+            txtremover.BackColor = Color.FromArgb(202, 196, 183);
             txtremover.ForeColor = SystemColors.ActiveCaptionText;
-            txtremover.Location = new Point(464, 122);
+            txtremover.Location = new Point(529, 122);
             txtremover.Name = "txtremover";
             txtremover.Size = new Size(66, 21);
             txtremover.TabIndex = 5;
@@ -107,23 +118,25 @@
             // 
             // txtfechar
             // 
+            txtfechar.BackColor = Color.FromArgb(230, 255, 0);
             txtfechar.ForeColor = SystemColors.ActiveCaptionText;
-            txtfechar.Location = new Point(454, 320);
+            txtfechar.Location = new Point(519, 320);
             txtfechar.Name = "txtfechar";
             txtfechar.Size = new Size(107, 28);
             txtfechar.TabIndex = 6;
             txtfechar.Text = "Fechar Pedido";
-            txtfechar.UseVisualStyleBackColor = true;
+            txtfechar.UseVisualStyleBackColor = false;
             txtfechar.Click += txtfechar_Click;
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(478, 267);
+            lblTotal.Location = new Point(543, 267);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(52, 15);
             lblTotal.TabIndex = 7;
             lblTotal.Text = "Total: R$";
+            lblTotal.Click += lblTotal_Click;
             // 
             // data
             // 
@@ -141,44 +154,88 @@
             hora.Size = new Size(68, 23);
             hora.TabIndex = 9;
             // 
-            // quantidade
-            // 
-            quantidade.Location = new Point(23, 320);
-            quantidade.Name = "quantidade";
-            quantidade.Size = new Size(100, 23);
-            quantidade.TabIndex = 10;
-            quantidade.TextChanged += quantidade_TextChanged;
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 302);
+            label1.Font = new Font("Agrandir Narrow", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(230, 255, 0);
+            label1.Location = new Point(59, 301);
             label1.Name = "label1";
-            label1.Size = new Size(110, 15);
+            label1.Size = new Size(116, 16);
             label1.TabIndex = 11;
-            label1.Text = "Digite a quantidade";
-            label1.Click += label1_Click;
+            label1.Text = "Informe a quantidade";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Captura_de_tela_2025_05_19_081851;
+            pictureBox1.BackgroundImageLayout = ImageLayout.None;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(23, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 56);
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
+            // txtQuantidade
+            // 
+            txtQuantidade.Location = new Point(96, 320);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(50, 23);
+            txtQuantidade.TabIndex = 14;
+            txtQuantidade.ValueChanged += txtQuantidade_ValueChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(23, 22);
+            label2.Font = new Font("Agrandir Narrow", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(230, 255, 0);
+            label2.Location = new Point(57, 232);
             label2.Name = "label2";
-            label2.Size = new Size(76, 31);
-            label2.TabIndex = 12;
-            label2.Text = "Bolt";
-            label2.Click += label2_Click;
+            label2.Size = new Size(118, 16);
+            label2.TabIndex = 15;
+            label2.Text = "Forma de pagamento";
+            label2.Click += lblPagamento;
+            // 
+            // txtNomecliente
+            // 
+            txtNomecliente.Location = new Point(793, 401);
+            txtNomecliente.Name = "txtNomecliente";
+            txtNomecliente.Size = new Size(100, 23);
+            txtNomecliente.TabIndex = 17;
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.ForeColor = Color.FromArgb(230, 255, 0);
+            lblNome.Location = new Point(689, 404);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(98, 15);
+            lblNome.TabIndex = 18;
+            lblNome.Text = "Nome do cliente:";
+            // 
+            // cBoxPagamento
+            // 
+            cBoxPagamento.FormattingEnabled = true;
+            cBoxPagamento.Items.AddRange(new object[] { "Dinheiro", "Pix", "Cartão de crédito", "Cartão de débito" });
+            cBoxPagamento.Location = new Point(57, 251);
+            cBoxPagamento.Name = "cBoxPagamento";
+            cBoxPagamento.Size = new Size(121, 23);
+            cBoxPagamento.TabIndex = 19;
+            cBoxPagamento.SelectedIndexChanged += cBoxPagamento_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GrayText;
-            ClientSize = new Size(919, 476);
+            BackColor = Color.FromArgb(17, 25, 12);
+            ClientSize = new Size(974, 471);
+            Controls.Add(cBoxPagamento);
+            Controls.Add(lblNome);
+            Controls.Add(txtNomecliente);
             Controls.Add(label2);
+            Controls.Add(txtQuantidade);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Controls.Add(quantidade);
             Controls.Add(hora);
             Controls.Add(data);
             Controls.Add(lblTotal);
@@ -194,6 +251,8 @@
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtQuantidade).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -210,8 +269,12 @@
         private Label lblTotal;
         private DateTimePicker data;
         private DateTimePicker hora;
-        private TextBox quantidade;
         private Label label1;
+        private PictureBox pictureBox1;
+        private NumericUpDown txtQuantidade;
         private Label label2;
+        private TextBox txtNomecliente;
+        private Label lblNome;
+        private ComboBox cBoxPagamento;
     }
 }
