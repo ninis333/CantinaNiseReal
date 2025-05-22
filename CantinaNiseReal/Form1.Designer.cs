@@ -52,22 +52,22 @@
             // txtprodutos
             // 
             txtprodutos.AutoSize = true;
-            txtprodutos.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtprodutos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtprodutos.ForeColor = Color.FromArgb(230, 255, 0);
             txtprodutos.Location = new Point(278, 51);
             txtprodutos.Name = "txtprodutos";
-            txtprodutos.Size = new Size(109, 17);
+            txtprodutos.Size = new Size(125, 16);
             txtprodutos.TabIndex = 0;
             txtprodutos.Text = "Produtos Cantina";
             // 
             // txtcarrinho
             // 
             txtcarrinho.AutoSize = true;
-            txtcarrinho.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtcarrinho.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtcarrinho.ForeColor = Color.FromArgb(230, 255, 0);
             txtcarrinho.Location = new Point(780, 51);
             txtcarrinho.Name = "txtcarrinho";
-            txtcarrinho.Size = new Size(60, 17);
+            txtcarrinho.Size = new Size(65, 16);
             txtcarrinho.TabIndex = 1;
             txtcarrinho.Text = "Carrinho";
             // 
@@ -90,6 +90,7 @@
             txtlista.Name = "txtlista";
             txtlista.Size = new Size(186, 274);
             txtlista.TabIndex = 3;
+            txtlista.SelectedIndexChanged += txtlista_SelectedIndexChanged;
             // 
             // txtadicionar
             // 
@@ -157,11 +158,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Agrandir Narrow", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(230, 255, 0);
             label1.Location = new Point(59, 301);
             label1.Name = "label1";
-            label1.Size = new Size(116, 16);
+            label1.Size = new Size(124, 15);
             label1.TabIndex = 11;
             label1.Text = "Informe a quantidade";
             // 
@@ -187,11 +188,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Agrandir Narrow", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(230, 255, 0);
             label2.Location = new Point(57, 232);
             label2.Name = "label2";
-            label2.Size = new Size(118, 16);
+            label2.Size = new Size(126, 15);
             label2.TabIndex = 15;
             label2.Text = "Forma de pagamento";
             label2.Click += lblPagamento;
@@ -216,7 +217,6 @@
             // cBoxPagamento
             // 
             cBoxPagamento.FormattingEnabled = true;
-            cBoxPagamento.Items.AddRange(new object[] { "Dinheiro", "Pix", "Cartão de crédito", "Cartão de débito" });
             cBoxPagamento.Location = new Point(57, 251);
             cBoxPagamento.Name = "cBoxPagamento";
             cBoxPagamento.Size = new Size(121, 23);
@@ -248,7 +248,7 @@
             Controls.Add(txtprodutos);
             ForeColor = SystemColors.ButtonFace;
             Name = "Form1";
-            Text = "Form1";
+            Text = "s";
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
